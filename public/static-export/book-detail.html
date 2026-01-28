@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Great Gatsby - BookNest</title>
+  <meta name="description" content="View details and chat with the owner about The Great Gatsby on BookNest.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">B</div>
+        <span class="logo-text">Book<span>Nest</span></span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <div class="header-buttons">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Sign Up</a>
+      </div>
+      <button class="mobile-nav-toggle" onclick="toggleMobileNav()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="padding: 2rem 1rem;">
+      <!-- Back Button -->
+      <a href="browse.html" class="flex items-center gap-2 text-muted mb-6" style="transition: color 0.2s;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to Browse
+      </a>
+
+      <div class="grid grid-2" style="gap: 2rem;">
+        <!-- Left - Book Image -->
+        <div>
+          <div class="card-elevated" style="border-radius: 1rem; overflow: hidden; position: relative;">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&h=800&fit=crop" alt="The Great Gatsby" style="width: 100%; aspect-ratio: 3/4; object-fit: cover;">
+            <div style="position: absolute; top: 1rem; left: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <span class="badge badge-secondary" style="background: rgba(255,255,255,0.9);">Good</span>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex gap-4 mt-4">
+            <button class="btn btn-ghost flex-1">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              </svg>
+              Save
+            </button>
+            <button class="btn btn-ghost flex-1">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+              Share
+            </button>
+            <button class="btn btn-ghost flex-1">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                <line x1="4" y1="22" x2="4" y2="15"></line>
+              </svg>
+              Report
+            </button>
+          </div>
+        </div>
+
+        <!-- Right - Book Details & Chat -->
+        <div>
+          <!-- Book Info -->
+          <div class="card card-elevated mb-6">
+            <h1 style="font-size: 1.875rem; font-weight: bold; margin-bottom: 0.5rem;">The Great Gatsby</h1>
+            <p class="text-muted" style="font-size: 1.125rem; margin-bottom: 1rem;">by F. Scott Fitzgerald</p>
+
+            <div style="font-size: 1.875rem; font-weight: bold; color: var(--primary); margin-bottom: 1rem;">₹150</div>
+
+            <div class="flex gap-4 text-muted mb-6" style="flex-wrap: wrap; font-size: 0.875rem;">
+              <span class="flex items-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Mumbai, Maharashtra
+              </span>
+              <span class="flex items-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                Listed Jan 15, 2024
+              </span>
+            </div>
+
+            <div style="border-top: 1px solid var(--border); padding-top: 1rem; margin-bottom: 1.5rem;">
+              <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Description</h3>
+              <p class="text-muted">A classic novel about the American Dream set in the Jazz Age. Well-preserved copy with original cover art.</p>
+            </div>
+
+            <div style="border-top: 1px solid var(--border); padding-top: 1rem;">
+              <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Category</h3>
+              <span class="badge badge-secondary">Classic Literature</span>
+            </div>
+          </div>
+
+          <!-- Owner Info -->
+          <div class="card card-elevated mb-6">
+            <div class="flex items-center gap-4">
+              <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--hero-gradient); display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 1.25rem; font-weight: bold; color: white;">R</span>
+              </div>
+              <div>
+                <h3 style="font-weight: 600;">Rahul Sharma</h3>
+                <p class="text-muted" style="font-size: 0.875rem;">Member since 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Section -->
+          <div class="card card-elevated" style="overflow: hidden; padding: 0;">
+            <div style="padding: 1rem 1.5rem; border-bottom: 1px solid var(--border);">
+              <h3 class="flex items-center gap-2" style="font-weight: 600;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Chat with Owner
+              </h3>
+            </div>
+
+            <!-- Messages -->
+            <div id="chatMessages" style="height: 256px; overflow-y: auto; padding: 1rem;">
+              <div style="display: flex; justify-content: flex-start; margin-bottom: 0.75rem;">
+                <div style="max-width: 80%; border-radius: 1rem; padding: 0.5rem 1rem; background: var(--muted);">
+                  <p style="font-size: 0.875rem;">Hi! Is this book still available?</p>
+                  <p class="text-muted" style="font-size: 0.75rem; margin-top: 0.25rem;">10:30 AM</p>
+                </div>
+              </div>
+              <div style="display: flex; justify-content: flex-end; margin-bottom: 0.75rem;">
+                <div style="max-width: 80%; border-radius: 1rem; padding: 0.5rem 1rem; background: var(--hero-gradient); color: white;">
+                  <p style="font-size: 0.875rem;">Yes, it is! Are you interested in swapping?</p>
+                  <p style="font-size: 0.75rem; margin-top: 0.25rem; opacity: 0.7;">10:32 AM</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input -->
+            <div style="padding: 1rem; border-top: 1px solid var(--border);">
+              <div class="flex gap-2">
+                <input type="text" id="chatInput" class="input flex-1" placeholder="Type your message...">
+                <button class="btn btn-hero btn-icon" onclick="sendChatMessage()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">B</div>
+            <span class="logo-text">Book<span>Nest</span></span>
+          </a>
+          <p>Connect with book lovers in your community. Swap, trade, or sell your pre-loved books and discover new reads at amazing prices.</p>
+          <div class="footer-contact">
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Available across India
+            </span>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              hello@booknest.in
+            </span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="browse.html">Browse Books</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="#">Community Guidelines</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 BookNest. Made with ❤️ for book lovers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
