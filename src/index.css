@@ -15,7 +15,7 @@
     --popover: 140 12% 95%;
     --popover-foreground: 150 40% 12%;
 
-    --primary: 152 45% 32%;
+    --primary: 152 42% 45%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 145 15% 88%;
@@ -32,13 +32,13 @@
 
     --border: 145 15% 85%;
     --input: 145 15% 85%;
-    --ring: 152 45% 32%;
+    --ring: 152 42% 45%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 140 12% 95%;
     --sidebar-foreground: 150 40% 18%;
-    --sidebar-primary: 152 45% 32%;
+    --sidebar-primary: 152 42% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 145 15% 88%;
     --sidebar-accent-foreground: 150 40% 18%;
@@ -47,9 +47,9 @@
 
     /* Custom tokens - Forest Green Theme */
     --gold: 38 80% 50%;
-    --coral: 152 50% 38%;
-    --hover: 152 50% 38%;
-    --hero-gradient: linear-gradient(135deg, hsl(152 45% 32%) 0%, hsl(140 40% 45%) 50%, hsl(38 80% 50%) 100%);
+    --coral: 152 45% 50%;
+    --hover: 152 45% 50%;
+    --hero-gradient: linear-gradient(135deg, hsl(152 42% 45%) 0%, hsl(140 38% 55%) 50%, hsl(38 80% 50%) 100%);
     --card-shadow: 0 4px 20px -4px hsl(150 40% 12% / 0.1);
     --card-hover-shadow: 0 8px 30px -4px hsl(150 40% 12% / 0.18);
     --glass-bg: hsl(140 15% 97% / 0.85);
