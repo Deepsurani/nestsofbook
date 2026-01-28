@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account - BookNest</title>
+  <meta name="description" content="Create your BookNest account to start swapping books with readers near you.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="auth-layout">
+    <!-- Left Panel - Image -->
+    <div class="auth-image-panel">
+      <div class="auth-image-content">
+        <div class="auth-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <h2 style="font-size: 1.875rem; font-weight: bold; margin-bottom: 1rem;">Start Your Book Journey</h2>
+        <p style="opacity: 0.8;">
+          Create an account to list your books, connect with readers, 
+          and discover amazing books from your community.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Panel - Form -->
+    <div class="auth-form-panel">
+      <div class="auth-form-container animate-slide-up">
+        <!-- Logo -->
+        <a href="index.html" class="logo mb-8" style="display: inline-flex;">
+          <div class="logo-icon">B</div>
+          <span class="logo-text">Book<span>Nest</span></span>
+        </a>
+
+        <h1 style="font-size: 1.875rem; font-weight: bold; margin-bottom: 0.5rem;">Create Account</h1>
+        <p class="text-muted mb-8">Join our book-loving community today</p>
+
+        <form onsubmit="handleRegisterSubmit(event)">
+          <div class="form-group">
+            <label class="label" for="name">Full Name</label>
+            <div class="input-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <input type="text" id="name" class="input input-icon input-lg" placeholder="John Doe" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="label" for="email">Email</label>
+            <div class="input-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <input type="email" id="email" class="input input-icon input-lg" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="label" for="location">Location</label>
+            <div class="input-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <input type="text" id="location" class="input input-icon input-lg" placeholder="Mumbai, Maharashtra" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="label" for="password">Password</label>
+            <div class="input-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <input type="password" id="password" class="input input-icon input-lg" placeholder="••••••••" required minlength="6" style="padding-right: 3rem;">
+              <button type="button" data-toggle="password" onclick="togglePasswordVisibility('password')" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: var(--muted-foreground);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="label" for="confirmPassword">Confirm Password</label>
+            <div class="input-wrapper">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <input type="password" id="confirmPassword" class="input input-icon input-lg" placeholder="••••••••" required minlength="6">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-hero btn-lg" style="width: 100%; margin-top: 1rem;">
+            Create Account
+          </button>
+        </form>
+
+        <p class="text-center text-muted mt-6">
+          Already have an account? <a href="login.html" class="text-primary" style="font-weight: 500;">Sign in</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
