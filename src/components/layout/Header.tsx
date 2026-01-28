@@ -16,6 +16,7 @@ const Header = ({ isLoggedIn = false, onLogout }: HeaderProps) => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/browse", label: "Browse Books" },
+    { href: "/student", label: "Student Portal" },
     { href: "/about", label: "About" },
     { href: "/faq", label: "FAQ" },
   ];
