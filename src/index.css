@@ -6,100 +6,100 @@
 
 @layer base {
   :root {
-    --background: 140 15% 97%;
-    --foreground: 150 40% 12%;
+    --background: 100 20% 97%;
+    --foreground: 110 30% 15%;
 
-    --card: 140 12% 95%;
-    --card-foreground: 150 40% 12%;
+    --card: 100 15% 95%;
+    --card-foreground: 110 30% 15%;
 
-    --popover: 140 12% 95%;
-    --popover-foreground: 150 40% 12%;
+    --popover: 100 15% 95%;
+    --popover-foreground: 110 30% 15%;
 
-    --primary: 152 42% 45%;
+    --primary: 108 30% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 145 15% 88%;
-    --secondary-foreground: 150 40% 18%;
+    --secondary: 105 18% 88%;
+    --secondary-foreground: 110 30% 20%;
 
-    --muted: 145 10% 90%;
-    --muted-foreground: 150 15% 40%;
+    --muted: 105 12% 90%;
+    --muted-foreground: 110 15% 42%;
 
-    --accent: 38 80% 50%;
+    --accent: 38 75% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 145 15% 85%;
-    --input: 145 15% 85%;
-    --ring: 152 42% 45%;
+    --border: 105 15% 85%;
+    --input: 105 15% 85%;
+    --ring: 108 30% 52%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 140 12% 95%;
-    --sidebar-foreground: 150 40% 18%;
-    --sidebar-primary: 152 42% 45%;
+    --sidebar-background: 100 15% 95%;
+    --sidebar-foreground: 110 30% 20%;
+    --sidebar-primary: 108 30% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 145 15% 88%;
-    --sidebar-accent-foreground: 150 40% 18%;
-    --sidebar-border: 145 15% 85%;
-    --sidebar-ring: 152 45% 32%;
+    --sidebar-accent: 105 18% 88%;
+    --sidebar-accent-foreground: 110 30% 20%;
+    --sidebar-border: 105 15% 85%;
+    --sidebar-ring: 108 30% 52%;
 
-    /* Custom tokens - Forest Green Theme */
-    --gold: 38 80% 50%;
-    --coral: 152 45% 50%;
-    --hover: 152 45% 50%;
-    --hero-gradient: linear-gradient(135deg, hsl(152 42% 45%) 0%, hsl(140 38% 55%) 50%, hsl(38 80% 50%) 100%);
-    --card-shadow: 0 4px 20px -4px hsl(150 40% 12% / 0.1);
-    --card-hover-shadow: 0 8px 30px -4px hsl(150 40% 12% / 0.18);
-    --glass-bg: hsl(140 15% 97% / 0.85);
+    /* Custom tokens - Tea Green Theme */
+    --gold: 38 75% 50%;
+    --coral: 108 35% 55%;
+    --hover: 108 35% 55%;
+    --hero-gradient: linear-gradient(135deg, hsl(108 30% 52%) 0%, hsl(100 28% 60%) 50%, hsl(38 75% 50%) 100%);
+    --card-shadow: 0 4px 20px -4px hsl(110 30% 15% / 0.1);
+    --card-hover-shadow: 0 8px 30px -4px hsl(110 30% 15% / 0.18);
+    --glass-bg: hsl(100 20% 97% / 0.85);
   }
 
   .dark {
-    --background: 150 25% 8%;
-    --foreground: 145 15% 92%;
+    --background: 110 20% 8%;
+    --foreground: 105 15% 92%;
 
-    --card: 150 20% 12%;
-    --card-foreground: 145 15% 92%;
+    --card: 110 18% 12%;
+    --card-foreground: 105 15% 92%;
 
-    --popover: 150 20% 12%;
-    --popover-foreground: 145 15% 92%;
+    --popover: 110 18% 12%;
+    --popover-foreground: 105 15% 92%;
 
-    --primary: 152 50% 45%;
-    --primary-foreground: 150 25% 8%;
+    --primary: 108 35% 55%;
+    --primary-foreground: 110 20% 8%;
 
-    --secondary: 150 18% 18%;
-    --secondary-foreground: 145 15% 92%;
+    --secondary: 110 15% 18%;
+    --secondary-foreground: 105 15% 92%;
 
-    --muted: 150 18% 20%;
-    --muted-foreground: 145 10% 55%;
+    --muted: 110 15% 20%;
+    --muted-foreground: 105 10% 55%;
 
-    --accent: 38 75% 48%;
-    --accent-foreground: 150 25% 8%;
+    --accent: 38 70% 48%;
+    --accent-foreground: 110 20% 8%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 150 18% 20%;
-    --input: 150 18% 20%;
-    --ring: 152 50% 45%;
+    --border: 110 15% 20%;
+    --input: 110 15% 20%;
+    --ring: 108 35% 55%;
 
-    --sidebar-background: 150 20% 10%;
-    --sidebar-foreground: 145 15% 92%;
-    --sidebar-primary: 152 50% 45%;
-    --sidebar-primary-foreground: 150 25% 8%;
-    --sidebar-accent: 150 18% 18%;
-    --sidebar-accent-foreground: 145 15% 92%;
-    --sidebar-border: 150 18% 20%;
-    --sidebar-ring: 152 50% 45%;
+    --sidebar-background: 110 18% 10%;
+    --sidebar-foreground: 105 15% 92%;
+    --sidebar-primary: 108 35% 55%;
+    --sidebar-primary-foreground: 110 20% 8%;
+    --sidebar-accent: 110 15% 18%;
+    --sidebar-accent-foreground: 105 15% 92%;
+    --sidebar-border: 110 15% 20%;
+    --sidebar-ring: 108 35% 55%;
 
-    --gold: 38 75% 48%;
-    --coral: 152 55% 50%;
-    --hover: 152 55% 50%;
-    --hero-gradient: linear-gradient(135deg, hsl(152 50% 45%) 0%, hsl(140 45% 50%) 50%, hsl(38 75% 48%) 100%);
+    --gold: 38 70% 48%;
+    --coral: 108 40% 58%;
+    --hover: 108 40% 58%;
+    --hero-gradient: linear-gradient(135deg, hsl(108 35% 55%) 0%, hsl(100 32% 60%) 50%, hsl(38 70% 48%) 100%);
     --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
     --card-hover-shadow: 0 8px 30px -4px hsl(0 0% 0% / 0.6);
-    --glass-bg: hsl(150 25% 8% / 0.85);
+    --glass-bg: hsl(110 20% 8% / 0.85);
   }
 }
 
