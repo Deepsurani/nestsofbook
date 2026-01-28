@@ -58,7 +58,7 @@ export function StudentSidebar() {
           </div>
           {!collapsed && (
             <span className="font-serif text-xl font-bold text-foreground">
-              Book<span className="text-gradient">Swap</span>
+              Book<span className="text-gradient">Nest</span>
             </span>
           )}
         </Link>
