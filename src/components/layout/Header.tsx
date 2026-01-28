@@ -33,7 +33,7 @@ const Header = ({ isLoggedIn = false, onLogout }: HeaderProps) => {
               <BookOpen className="h-6 w-6 text-primary-foreground" />
             </div>
             <span className="font-serif text-2xl font-bold text-foreground">
-              Book<span className="text-gradient">Swap</span>
+              Book<span className="text-gradient">Nest</span>
             </span>
           </Link>
 

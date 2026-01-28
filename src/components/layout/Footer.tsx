@@ -13,7 +13,7 @@ const Footer = () => {
                 <BookOpen className="h-6 w-6 text-primary-foreground" />
               </div>
               <span className="font-serif text-2xl font-bold text-foreground">
-                Book<span className="text-gradient">Swap</span>
+                Book<span className="text-gradient">Nest</span>
               </span>
             </Link>
             <p className="text-muted-foreground mb-4 max-w-md">
@@ -27,7 +27,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>hello@bookswap.in</span>
+                <span>hello@booknest.in</span>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2024 BookSwap. Made with ❤️ for book lovers.</p>
+          <p>© 2024 BookNest. Made with ❤️ for book lovers.</p>
         </div>
       </div>
     </footer>
