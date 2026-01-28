@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Check, X, Clock, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -53,11 +54,11 @@ const SwapRequests = () => {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case "pending":
-        return <Badge variant="secondary" className="bg-yellow-100 text-yellow-700"><Clock className="h-3 w-3 mr-1" />Pending</Badge>;
+        return <Badge variant="secondary" className="bg-muted"><Clock className="h-3 w-3 mr-1" />Pending</Badge>;
       case "accepted":
-        return <Badge variant="secondary" className="bg-green-100 text-green-700"><Check className="h-3 w-3 mr-1" />Accepted</Badge>;
+        return <Badge variant="secondary" className="bg-accent/20 text-accent"><Check className="h-3 w-3 mr-1" />Accepted</Badge>;
       case "declined":
-        return <Badge variant="secondary" className="bg-red-100 text-red-700"><X className="h-3 w-3 mr-1" />Declined</Badge>;
+        return <Badge variant="destructive"><X className="h-3 w-3 mr-1" />Declined</Badge>;
       default:
         return null;
     }
@@ -138,17 +139,21 @@ const SwapRequests = () => {
                         <X className="h-4 w-4 mr-2" />
                         Decline
                       </Button>
-                      <Button variant="ghost">
-                        <MessageCircle className="h-4 w-4" />
-                      </Button>
+                      <Link to={`/student/swap-requests/${request.id}`}>
+                        <Button variant="ghost">
+                          <MessageCircle className="h-4 w-4" />
+                        </Button>
+                      </Link>
                     </div>
                   )}
 
                   {request.status === "accepted" && (
-                    <Button variant="outline" className="w-full">
-                      <MessageCircle className="h-4 w-4 mr-2" />
-                      Message {request.user}
-                    </Button>
+                    <Link to={`/student/swap-requests/${request.id}`}>
+                      <Button variant="outline" className="w-full">
+                        <MessageCircle className="h-4 w-4 mr-2" />
+                        Open Chat with {request.user}
+                      </Button>
+                    </Link>
                   )}
                 </div>
               ))

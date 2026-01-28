@@ -21,6 +21,7 @@ import StudentProfile from "./pages/student/StudentProfile";
 import AddBook from "./pages/student/AddBook";
 import MyBooks from "./pages/student/MyBooks";
 import SwapRequests from "./pages/student/SwapRequests";
+import SwapRequestChat from "./pages/student/SwapRequestChat";
 import StudentChat from "./pages/student/StudentChat";
 import BorrowedBooks from "./pages/student/BorrowedBooks";
 import SearchByArea from "./pages/student/SearchByArea";
@@ -53,6 +54,7 @@ const App = () => (
             <Route path="add-book" element={<AddBook />} />
             <Route path="my-books" element={<MyBooks />} />
             <Route path="swap-requests" element={<SwapRequests />} />
+            <Route path="swap-requests/:id" element={<SwapRequestChat />} />
             <Route path="chat" element={<StudentChat />} />
             <Route path="borrowed" element={<BorrowedBooks />} />
             <Route path="search-area" element={<SearchByArea />} />
