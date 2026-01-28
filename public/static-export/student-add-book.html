@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Book - Student Portal - BookNest</title>
+  <meta name="description" content="List a new book for swap or sale on BookNest.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/student.css">
+</head>
+<body>
+  <div class="student-layout">
+    <button class="mobile-sidebar-toggle" onclick="toggleStudentSidebar()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <div class="sidebar-overlay"></div>
+    
+    <aside class="student-sidebar">
+      <div class="student-sidebar-header">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">B</div>
+          <span class="logo-text">Book<span>Nest</span></span>
+        </a>
+      </div>
+      <div class="student-sidebar-content">
+        <p class="student-sidebar-label">Student Portal</p>
+        <ul class="student-sidebar-menu">
+          <li><a href="student-dashboard.html" class="student-sidebar-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            Dashboard
+          </a></li>
+          <li><a href="student-profile.html" class="student-sidebar-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            My Profile
+          </a></li>
+          <li><a href="student-add-book.html" class="student-sidebar-item active">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add Book
+          </a></li>
+          <li><a href="student-my-books.html" class="student-sidebar-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            My Books
+          </a></li>
+          <li><a href="student-swap-requests.html" class="student-sidebar-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+            Swap Requests
+          </a></li>
+          <li><a href="student-borrowed.html" class="student-sidebar-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            Borrowed Books
+          </a></li>
+        </ul>
+      </div>
+      <div class="student-sidebar-footer">
+        <a href="index.html" class="btn btn-ghost" style="width: 100%; justify-content: flex-start;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          Logout
+        </a>
+      </div>
+    </aside>
+
+    <main class="student-main">
+      <div class="animate-fade-in" style="max-width: 700px;">
+        <div class="mb-6">
+          <h2 style="font-size: 1.5rem; font-weight: bold;">Add New Book</h2>
+          <p class="text-muted">List your book for swap or sale</p>
+        </div>
+
+        <form onsubmit="handleAddBook(event)" class="card card-elevated" style="padding: 1.5rem;">
+          <!-- Image Upload -->
+          <div class="mb-6">
+            <label class="label mb-2">Book Image</label>
+            <div class="flex gap-4" style="align-items: flex-start;">
+              <label id="imageUpload" class="image-upload">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--muted-foreground); margin-bottom: 0.5rem;">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <span class="text-muted" style="font-size: 0.75rem;">Upload</span>
+                <input type="file" id="bookImage" accept="image/*" onchange="handleImageUpload(this)" style="display: none;">
+              </label>
+              <div id="imagePreview" class="image-preview" style="display: none;"></div>
+              <p class="text-muted" style="font-size: 0.875rem; flex: 1;">
+                Upload a clear photo of your book's cover. Good photos help your book get noticed!
+              </p>
+            </div>
+          </div>
+
+          <!-- Book Details -->
+          <div class="grid grid-2 mb-4" style="gap: 1rem;">
+            <div class="form-group">
+              <label class="label" for="title">Book Title *</label>
+              <input type="text" id="title" class="input" placeholder="Enter book title" required>
+            </div>
+            <div class="form-group">
+              <label class="label" for="author">Author *</label>
+              <input type="text" id="author" class="input" placeholder="Enter author name" required>
+            </div>
+          </div>
+
+          <div class="grid grid-2 mb-4" style="gap: 1rem;">
+            <div class="form-group">
+              <label class="label" for="category">Category *</label>
+              <select id="category" class="select" required>
+                <option value="">Select category</option>
+                <option value="Classic Literature">Classic Literature</option>
+                <option value="Self-Help">Self-Help</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Finance">Finance</option>
+                <option value="Education">Education</option>
+                <option value="History">History</option>
+                <option value="Science Fiction">Science Fiction</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="label" for="condition">Condition *</label>
+              <select id="condition" class="select" required>
+                <option value="">Select condition</option>
+                <option value="new">New</option>
+                <option value="like-new">Like New</option>
+                <option value="good">Good</option>
+                <option value="fair">Fair</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group mb-4">
+            <label class="label" for="description">Description</label>
+            <textarea id="description" class="textarea" rows="4" placeholder="Describe your book's condition, any highlights, notes, etc."></textarea>
+          </div>
+
+          <div class="form-group mb-4">
+            <label class="label" for="location">Your Location *</label>
+            <input type="text" id="location" class="input" placeholder="e.g., Mumbai, Maharashtra" required>
+          </div>
+
+          <!-- Swap Only Toggle -->
+          <div class="toggle-row mb-4">
+            <div>
+              <p style="font-weight: 500;">Swap Only</p>
+              <p class="text-muted" style="font-size: 0.875rem;">Toggle off to set a price for selling</p>
+            </div>
+            <div id="swapOnlyToggle" class="toggle-switch active" onclick="toggleSwapOnly()"></div>
+          </div>
+
+          <div id="priceField" class="form-group mb-6" style="display: none;">
+            <label class="label" for="price">Price (₹)</label>
+            <input type="number" id="price" class="input" placeholder="Enter price">
+          </div>
+
+          <button type="submit" class="btn btn-hero btn-lg" style="width: 100%;">List Book</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/student.js"></script>
+</body>
+</html>
