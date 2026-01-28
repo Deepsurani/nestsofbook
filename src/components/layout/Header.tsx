@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { BookOpen, Menu, X, User, LogIn, Plus } from "lucide-react";
+import { Menu, User, LogIn, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import booknestLogo from "@/assets/booknest-logo.png";
 
 interface HeaderProps {
   isLoggedIn?: boolean;
@@ -29,9 +30,11 @@ const Header = ({ isLoggedIn = false, onLogout }: HeaderProps) => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="hero-gradient p-2 rounded-lg group-hover:scale-105 transition-transform">
-              <BookOpen className="h-6 w-6 text-primary-foreground" />
-            </div>
+            <img 
+              src={booknestLogo} 
+              alt="BookNest" 
+              className="h-10 w-10 object-contain group-hover:scale-105 transition-transform"
+            />
             <span className="font-serif text-2xl font-bold text-foreground">
               Book<span className="text-gradient">Nest</span>
             </span>

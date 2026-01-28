@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BookOpen, Mail, Lock, Eye, EyeOff } from "lucide-react";
+import { Mail, Lock, Eye, EyeOff, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import booknestLogo from "@/assets/booknest-logo.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -36,9 +37,11 @@ const Login = () => {
         <div className="w-full max-w-md animate-slide-up">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 mb-8">
-            <div className="hero-gradient p-2 rounded-lg">
-              <BookOpen className="h-6 w-6 text-primary-foreground" />
-            </div>
+            <img 
+              src={booknestLogo} 
+              alt="BookNest" 
+              className="h-10 w-10 object-contain"
+            />
             <span className="font-serif text-2xl font-bold text-foreground">
               Book<span className="text-gradient">Nest</span>
             </span>
