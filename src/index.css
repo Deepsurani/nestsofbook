@@ -49,6 +49,7 @@
     --gold: 30 55% 45%;
     --coral: 75 25% 48%;
     --hover: 75 25% 48%;
+    --icon: 75 22% 42%;
     --hero-gradient: linear-gradient(135deg, hsl(75 22% 42%) 0%, hsl(65 20% 50%) 50%, hsl(30 55% 45%) 100%);
     --card-shadow: 0 4px 20px -4px hsl(70 25% 18% / 0.1);
     --card-hover-shadow: 0 8px 30px -4px hsl(70 25% 18% / 0.18);
@@ -96,6 +97,7 @@
     --gold: 30 50% 48%;
     --coral: 75 32% 55%;
     --hover: 75 32% 55%;
+    --icon: 75 28% 52%;
     --hero-gradient: linear-gradient(135deg, hsl(75 28% 52%) 0%, hsl(65 25% 55%) 50%, hsl(30 50% 48%) 100%);
     --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
     --card-hover-shadow: 0 8px 30px -4px hsl(0 0% 0% / 0.6);
@@ -115,6 +117,11 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+  }
+
+  /* Global icon color */
+  svg:not([class*="text-"]) {
+    color: hsl(var(--icon));
   }
 }
 
