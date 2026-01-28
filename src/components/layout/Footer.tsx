@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { BookOpen, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
+import booknestLogo from "@/assets/booknest-logo.png";
 
 const Footer = () => {
   return (
@@ -9,9 +10,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="hero-gradient p-2 rounded-lg">
-                <BookOpen className="h-6 w-6 text-primary-foreground" />
-              </div>
+              <img 
+                src={booknestLogo} 
+                alt="BookNest" 
+                className="h-10 w-10 object-contain"
+              />
               <span className="font-serif text-2xl font-bold text-foreground">
                 Book<span className="text-gradient">Nest</span>
               </span>

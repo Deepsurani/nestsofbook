@@ -11,7 +11,7 @@ import {
   LogOut
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import {
   Sidebar,
   SidebarContent,
@@ -26,7 +26,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import booknestLogo from "@/assets/booknest-logo.png";
 
 const menuItems = [
   { title: "Dashboard", url: "/student", icon: BookOpen },
@@ -53,9 +53,11 @@ export function StudentSidebar() {
     <Sidebar collapsible="icon" className="border-r border-border">
       <SidebarHeader className="p-4">
         <Link to="/" className="flex items-center gap-2">
-          <div className="hero-gradient p-2 rounded-lg">
-            <BookOpen className="h-5 w-5 text-primary-foreground" />
-          </div>
+          <img 
+            src={booknestLogo} 
+            alt="BookNest" 
+            className="h-8 w-8 object-contain"
+          />
           {!collapsed && (
             <span className="font-serif text-xl font-bold text-foreground">
               Book<span className="text-gradient">Nest</span>
