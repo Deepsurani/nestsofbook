@@ -43,8 +43,8 @@ const CategorySection = () => {
               className="group animate-scale-in"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="flex flex-col items-center p-6 bg-card rounded-xl card-elevated text-center transition-all group-hover:bg-primary group-hover:text-primary-foreground">
-                <div className={`w-14 h-14 rounded-xl ${category.color} flex items-center justify-center mb-3 group-hover:bg-primary-foreground/20`}>
+              <div className="flex flex-col items-center p-6 bg-card rounded-xl card-elevated text-center transition-all group-hover:bg-hover group-hover:text-white">
+                <div className={`w-14 h-14 rounded-xl ${category.color} flex items-center justify-center mb-3 group-hover:bg-white/20`}>
                   <category.icon className="h-7 w-7" />
                 </div>
                 <span className="text-sm font-medium">{category.name}</span>

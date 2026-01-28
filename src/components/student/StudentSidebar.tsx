@@ -77,8 +77,8 @@ export function StudentSidebar() {
                     <NavLink 
                       to={item.url} 
                       end 
-                      className="flex items-center gap-3"
-                      activeClassName="bg-primary/10 text-primary font-medium"
+                      className="flex items-center gap-3 hover:bg-hover hover:text-white"
+                      activeClassName="bg-hover/10 text-hover font-medium"
                     >
                       <item.icon className="h-4 w-4 shrink-0" />
                       {!collapsed && <span>{item.title}</span>}
