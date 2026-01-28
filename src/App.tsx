@@ -12,6 +12,19 @@ import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
+// Student Pages
+import StudentLayout from "./components/student/StudentLayout";
+import StudentDashboard from "./pages/student/StudentDashboard";
+import StudentProfile from "./pages/student/StudentProfile";
+import AddBook from "./pages/student/AddBook";
+import MyBooks from "./pages/student/MyBooks";
+import SwapRequests from "./pages/student/SwapRequests";
+import StudentChat from "./pages/student/StudentChat";
+import BorrowedBooks from "./pages/student/BorrowedBooks";
+import SearchByArea from "./pages/student/SearchByArea";
+import Report from "./pages/student/Report";
+import ReturnBook from "./pages/student/ReturnBook";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -28,6 +41,21 @@ const App = () => (
           <Route path="/book/:id" element={<BookDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
+          
+          {/* Student Portal Routes */}
+          <Route path="/student" element={<StudentLayout />}>
+            <Route index element={<StudentDashboard />} />
+            <Route path="profile" element={<StudentProfile />} />
+            <Route path="add-book" element={<AddBook />} />
+            <Route path="my-books" element={<MyBooks />} />
+            <Route path="swap-requests" element={<SwapRequests />} />
+            <Route path="chat" element={<StudentChat />} />
+            <Route path="borrowed" element={<BorrowedBooks />} />
+            <Route path="search-area" element={<SearchByArea />} />
+            <Route path="report" element={<Report />} />
+            <Route path="return" element={<ReturnBook />} />
+          </Route>
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
