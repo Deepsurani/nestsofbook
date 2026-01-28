@@ -1530,3 +1530,101 @@ svg {
 .toggle-switch.active::after {
   transform: translateX(20px);
 }
+
+/* ==========================================
+   404 ERROR PAGE
+   ========================================== */
+
+.error-page {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+}
+
+.error-content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.error-icon {
+  margin-bottom: 1.5rem;
+  opacity: 0.6;
+}
+
+.error-icon svg {
+  color: var(--primary);
+}
+
+.error-code {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+  background: var(--hero-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.error-title {
+  font-size: 1.75rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.error-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-actions .btn svg {
+  color: inherit;
+}
+
+.error-suggestions {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.error-suggestions p {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.75rem;
+}
+
+.error-suggestions ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-suggestions a {
+  font-size: 0.875rem;
+  color: var(--primary);
+  transition: opacity 0.2s;
+}
+
+.error-suggestions a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
